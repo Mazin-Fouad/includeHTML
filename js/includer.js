@@ -1,5 +1,5 @@
-function loadContent(url, elementId) {
-  fetch(url, { cache: 'no-cache' }) // Optional: prevents caching
+function loadContent(path, elementId) {
+  fetch(path, { cache: 'no-cache' }) // Optional: prevents caching
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -9,9 +9,9 @@ function loadContent(url, elementId) {
     .then((data) => {
       document.getElementById(elementId).innerHTML = data;
     })
-    .catch((error) => console.error(`Error loading ${url}:`, error));
+    .catch((error) => console.error(`Error loading ${path}:`, error));
 }
 
-loadContent('navbar.html', 'navbar');
+loadContent('navba.html', 'navbar');
 loadContent('hero.html', 'hero');
 loadContent('footer.html', 'footer');
