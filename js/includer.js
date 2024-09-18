@@ -13,6 +13,6 @@ function loadContent(path, elementId) {
     .catch((error) => console.error(`Error loading ${path}: ${error.message}`));
 }
 
-loadContent('htmlPages/navbar.html', 'navbar');
-loadContent('htmlPages/hero.html', 'hero');
-loadContent('htmlPages/footer.html', 'footer');
+loadContent('sharedComponents/navbar.html', 'navbar');
+loadContent('sharedComponents/hero.html', 'hero');
+loadContent('sharedComponents/footer.html', 'footer');
